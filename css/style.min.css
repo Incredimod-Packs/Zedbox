@@ -1,14 +1,16 @@
-:root {
+﻿:root {
     --colBck: #121212;
     --col0: #919191;
     --col1: #5f5f5f;
     --col2: #4b4b4b;
     --col3: #373737;
     --col4: #232323;
-    --col-blue: #2c86fe;
-    --col-blue-light1: #2772d8;
-    --darkmode-bck: #111111;
+    --darkmode-bck: #041f29
 }
+
+
+
+
 
 .darkmode ::-webkit-scrollbar {
     width: 12px
@@ -115,7 +117,7 @@ body {
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
-    background-color: #fafafa
+    background-color: #000000
 }
 
 body.fluid {
@@ -165,7 +167,7 @@ body.random {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: #fafafa;
+    background-color: #000000;
     padding: 10%;
     overflow: auto;
     -webkit-overflow-scrolling: touch
@@ -248,8 +250,8 @@ body.miniPlayer #home #img-version {
 }
 
 body.miniPlayer #home #home-bt-play {
-    width: 132px;
-    height: 132px;
+    width: 512px;
+    height: 512px;
     margin-left: -66px;
     bottom: 0;
     top: 250px
@@ -263,9 +265,9 @@ body.miniPlayer #home #home-bt-play:hover .bck {
     background-color: #2772d8
 }
 
+body.miniPlayer #home #home-bt-album,
 body.miniPlayer #home #home-bt-info,
 body.miniPlayer #home #home-bt-list,
-body.miniPlayer #home #home-bt-news,
 body.miniPlayer #home #home-bt-param,
 body.miniPlayer #watch-info {
     display: none
@@ -346,7 +348,7 @@ body.miniPlayer #lock-pause .bt .bck {
     background-color: #5f5f5f
 }
 
-.featureLocked .hoverLocked .ic-locked {
+.appBrowser .hoverLocked .ic-locked {
     display: block;
     opacity: 0;
     -webkit-transform: scale(.5);
@@ -355,34 +357,29 @@ body.miniPlayer #lock-pause .bt .bck {
     background-color: var(--col4)
 }
 
-.featureLocked .hoverLocked:hover .ic-locked {
+.appBrowser .hoverLocked:hover .ic-locked {
     -webkit-transform: scale(1);
     transform: scale(1);
     opacity: 1;
     transition: all .2s cubic-bezier(.175, .885, .32, 1.275)
 }
 
-.featureLocked .bt.hoverLocked .ic-locked {
+.appBrowser .bt.hoverLocked .ic-locked {
     top: -12px
 }
 
-.featureLocked .bt-mini.hoverLocked .ic-locked {
+.appBrowser .bt-mini.hoverLocked .ic-locked {
     top: -12px;
     right: -10px;
     width: 25px;
     height: 25px
 }
 
-.featureLocked .box-popup .box .pop .bt.bt-haut.hoverLocked .ic-locked {
+.appBrowser .box-popup .box .pop .bt.bt-haut.hoverLocked .ic-locked {
     top: -10px;
     right: -10px;
     width: 30px;
     height: 30px
-}
-
-.featureLocked #pop-language,
-.featureLocked #tab-language {
-    display: none
 }
 
 .clear {
@@ -462,20 +459,21 @@ body.miniPlayer #lock-pause .bt .bck {
 
 #page-splash .centered #sp-title {
     position: absolute;
-    top: 110px;
-    left: 50%;
-    width: 500px;
-    margin-left: -215px;
-    height: 108px;
+    top: 0px;
+    left: 0%;
+    width: 640px;
+    margin-left: 180px;
+    height: 360px;
     -webkit-transform: translateY(0);
     transform: translateY(0);
     pointer-events: none;
-    background-image: url(../img/title.svg);
-    background-repeat: no-repeat
+    background-image: url(../img/title.png);
+    background-repeat: no-repeat;
+    background-size: 466px 280px;
 }
 
 .darkmode #page-splash .centered #sp-title {
-    background-image: url(../img/title-darkmode.svg)
+    background-image: url(../img/title-darkmode.png)
 }
 
 #page-splash .centered #sp-baseline {
@@ -517,9 +515,12 @@ body.miniPlayer #lock-pause .bt .bck {
     position: absolute;
     top: 200px;
     left: 50%;
-    width: 126px;
-    height: 150px;
-    margin-left: -63px
+    width: 256px;
+    height: 256px;
+    margin-left: -66px;
+    background-image: url(../img/switch-casque.png);
+    background-repeat: no-repeat;
+    background-size: 0px 0px;
 }
 
 #page-splash .centered #sp-select {
@@ -577,7 +578,7 @@ body.miniPlayer #lock-pause .bt .bck {
     animation: e .7s cubic-bezier(.165, .84, .44, 1) 0s forwards
 }
 
-.cn-and #page-splash .centered #sp-text.tweenUpSelect {
+.cn #page-splash .centered #sp-text.tweenUpSelect {
     -webkit-transform: translateY(-20px);
     transform: translateY(-20px);
     -webkit-animation: f .7s cubic-bezier(.165, .84, .44, 1) 0s forwards;
@@ -776,7 +777,7 @@ body.miniPlayer #lock-pause .bt .bck {
 #sp-select .icon .img,
 #sp-select .icon .txt {
     width: 120px;
-    background-size: 1030px 152px;
+    background-size: 250px 152px;
     background-repeat: no-repeat
 }
 
@@ -936,7 +937,7 @@ body.miniPlayer #lock-pause .bt .bck {
 }
 
 #sp-select .icon#icon1 .bul {
-    background-color: #019A92
+    background-color: #5f5f5f
 }
 
 #sp-select .icon#icon2 .bul {
@@ -1040,10 +1041,10 @@ body.miniPlayer #lock-pause .bt .bck {
 
 #home #img-version {
     position: absolute;
-    top: 4px;
-    left: 50%;
-    height: 13px;
-    width: 150px;
+    top: -100px;
+    left: 40%;
+    height: 200px;
+    width: 520px;
     margin-left: -75px;
     opacity: 0;
     background-size: 100%
@@ -1140,7 +1141,12 @@ body.miniPlayer #lock-pause .bt .bck {
     -webkit-transform: scale(.5);
     transform: scale(.5);
     opacity: 0;
-    cursor: auto
+    cursor: auto;
+    -moz-border-radius: 50px;
+    -webkit-border-radius: 50px;
+    border-radius: 50px;
+    -webkit-box-shadow: 0 0 20px #000;
+    box-shadow: 0 0 20px #000;
 }
 
 #home .bt .txt {
@@ -1166,7 +1172,9 @@ body.miniPlayer #lock-pause .bt .bck {
     left: 50%;
     margin-left: -50px;
     width: 100px;
-    height: 100px
+    height: 100px;
+    -webkit-box-shadow: 0 0 40px #000 !important;
+    box-shadow: 0 0 40px #000 !important;
 }
 
 #home #home-bt-play.animate {
@@ -1211,7 +1219,6 @@ body.miniPlayer #lock-pause .bt .bck {
     animation: m .3s cubic-bezier(.175, .885, .32, 1.275) 0s forwards
 }
 
-.bt#home-bt-fs,
 .bt#home-bt-info,
 .bt#home-bt-param {
     top: 44px;
@@ -1230,17 +1237,11 @@ body.miniPlayer #lock-pause .bt .bck {
     right: 103px
 }
 
-.bt#fs .bck,
 .bt#home-bt-info .bck,
 .bt#home-bt-param .bck {
     line-height: 0
 }
 
-.bt#home-bt-fs {
-    right: 162px
-}
-
-#home-bt-fs.animate,
 #home-bt-info.animate,
 #home-bt-param.animate {
     -webkit-animation: m .3s cubic-bezier(.175, .885, .32, 1.275) 0s forwards;
@@ -1277,7 +1278,7 @@ body.miniPlayer #lock-pause .bt .bck {
     }
 }
 
-#home-bt-news {
+#home-bt-album {
     position: absolute;
     top: 27px;
     left: 31px;
@@ -1286,11 +1287,11 @@ body.miniPlayer #lock-pause .bt .bck {
     opacity: 0
 }
 
-.safemode #home-bt-news {
+.safemode #home-bt-album {
     visibility: hidden
 }
 
-#home-bt-news .bck {
+#home-bt-album .bck {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1302,37 +1303,26 @@ body.miniPlayer #lock-pause .bt .bck {
     justify-content: center;
     width: 100%;
     height: 100%;
-    background-image: url(../img/top-stars.svg);
+    background-image: url(../img/top-stars.png);
     background-repeat: no-repeat;
     background-size: 546px 78px;
     background-position: -468px 0;
     -webkit-transform: rotate(0deg);
-    transform: rotate(0deg);
-    transition: -webkit-transform .3s cubic-bezier(.175, .885, .32, 1.275);
-    transition: transform .3s cubic-bezier(.175, .885, .32, 1.275);
-    transition: transform .3s cubic-bezier(.175, .885, .32, 1.275), -webkit-transform .3s cubic-bezier(.175, .885, .32, 1.275)
+    transform: rotate(0deg)
 }
 
-#home-bt-news .bck.focused {
+#home-bt-album .bck.focused {
     border-radius: 50%
 }
 
-#home-bt-news.animate {
+#home-bt-album.animate {
     -webkit-animation: n .7s cubic-bezier(.175, .885, .32, 1.275) 0s forwards;
     animation: n .7s cubic-bezier(.175, .885, .32, 1.275) 0s forwards
 }
 
-#home-bt-news.animate .bck {
+#home-bt-album.animate .bck {
     -webkit-animation: o .7s cubic-bezier(.175, .885, .32, 1.275) 0s;
     animation: o .7s cubic-bezier(.175, .885, .32, 1.275) 0s
-}
-
-.mouseEvent #home-bt-news:hover .bck {
-    -webkit-transform: rotate(-15deg);
-    transform: rotate(-15deg);
-    transition: -webkit-transform .1s cubic-bezier(.175, .885, .32, 1.275);
-    transition: transform .1s cubic-bezier(.175, .885, .32, 1.275);
-    transition: transform .1s cubic-bezier(.175, .885, .32, 1.275), -webkit-transform .1s cubic-bezier(.175, .885, .32, 1.275)
 }
 
 @-webkit-keyframes n {
@@ -1350,8 +1340,8 @@ body.miniPlayer #lock-pause .bt .bck {
 
     to {
         opacity: 1;
-        -webkit-transform: scale(.9);
-        transform: scale(.9);
+        -webkit-transform: scale(1);
+        transform: scale(1);
         cursor: pointer
     }
 }
@@ -1371,8 +1361,8 @@ body.miniPlayer #lock-pause .bt .bck {
 
     to {
         opacity: 1;
-        -webkit-transform: scale(.9);
-        transform: scale(.9);
+        -webkit-transform: scale(1);
+        transform: scale(1);
         cursor: pointer
     }
 }
@@ -1758,7 +1748,7 @@ body.miniPlayer #lock-pause .bt .bck {
 #mixlist #poplist .box-info {
     height: 116px;
     min-width: 760px;
-    background-color: #fafafa;
+    background-color: #000000;
     -webkit-transform: scale(1);
     transform: scale(1);
     transition: background-color .8s ease-in, -webkit-transform .5s cubic-bezier(.175, .885, .32, 1.275);
@@ -1809,7 +1799,7 @@ body.miniPlayer #lock-pause .bt .bck {
     left: 19px;
     width: 78px;
     height: 78px;
-    background-image: url(../img/top-stars.svg);
+    background-image: url(../img/top-stars.png);
     background-repeat: no-repeat;
     background-size: 546px 78px;
     background-position: -390px 0
@@ -1858,7 +1848,7 @@ body.miniPlayer #lock-pause .bt .bck {
 }
 
 #mixlist #poplist .line:nth-child(2n) .box-action {
-    background-color: #dcdcdc
+    background-color: #000000
 }
 
 .darkmode #mixlist #poplist .line:nth-child(2n) .box-action {
@@ -2491,7 +2481,7 @@ body.miniPlayer #lock-pause .bt .bck {
     height: 60px;
     margin: -652px 0 0 900px;
     border-radius: 50%;
-    background-color: #fafafa
+    background-color: #000000
 }
 
 .fluid #lock-pause #bt-resume {
@@ -2536,7 +2526,7 @@ body.miniPlayer #lock-pause .bt .bck {
 }
 
 .fluid #box-top {
-    background-color: #dcdcdc
+    background-color: #000000
 }
 
 #box-top #box-bt {
@@ -2607,14 +2597,6 @@ body:not(.fluid) #box-top #box-bt #box-bt2 {
         /* !bug sur iPhone7+, les boutons back, reset, random et record disparaissent après avoir regardé un replay dans la Playlist... */
 }
 
-#box-top #box-bt1 .bt.right {
-    margin: 0 6px
-}
-
-#box-top #box-bt1 .bt.right:last-child {
-    margin-right: 12px
-}
-
 #box-top #box-bt1.out,
 #box-top #box-bt2.out {
     opacity: 0;
@@ -2627,7 +2609,7 @@ body:not(.fluid) #box-top #box-bt #box-bt2 {
     left: 124px;
     width: calc(100% - 124px);
     height: 100%;
-    background-color: #fafafa;
+    background-color: #000000;
     transition: background-color .3s ease-in-out
 }
 
@@ -2693,6 +2675,7 @@ body:not(.fluid) #box-top.random #box-bt2 #box-bt2-bck {
 }
 
 #box-top .bt#bt-help {
+    margin-left: 12px;
     margin-right: 12px
 }
 
@@ -3003,14 +2986,6 @@ body:not(.fluid) #box-top.random #box-bt2 #box-bt2-bck {
     transition: background-color 0s
 }
 
-.bt .bck.col-blue {
-    background-color: var(--col-blue)
-}
-
-.bt:hover .bck.col-blue {
-    background-color: var(--col-blue-light1)
-}
-
 .darkmode .bt .bck {
     background-color: #555
 }
@@ -3026,7 +3001,7 @@ body:not(.fluid) #box-top.random #box-bt2 #box-bt2-bck {
     text-align: center;
     text-transform: uppercase;
     letter-spacing: 1px;
-    color: #dcdcdc;
+    color: #000000;
     white-space: nowrap
 }
 
@@ -3111,7 +3086,7 @@ body:not(.fluid) #box-top.random #box-bt2 #box-bt2-bck {
     text-align: center;
     text-transform: uppercase;
     letter-spacing: 1px;
-    color: #dcdcdc;
+    color: #000000;
     white-space: nowrap;
     border-radius: 16px;
     background-color: #8c8c8c;
@@ -3152,7 +3127,7 @@ body:not(.fluid) #box-top.random #box-bt2 #box-bt2-bck {
     position: relative;
     width: 38px;
     height: 24px;
-    background-color: #fafafa;
+    background-color: #000000;
     border-radius: 13px;
     margin-left: 0;
     transition: margin .2s ease-in-out
@@ -3188,7 +3163,7 @@ body:not(.fluid) #box-top.random #box-bt2 #box-bt2-bck {
     text-transform: uppercase;
     letter-spacing: 1px;
     white-space: nowrap;
-    background-color: #dcdcdc;
+    background-color: #000000;
     cursor: pointer
 }
 
@@ -3224,7 +3199,7 @@ body:not(.fluid) #box-top.random #box-bt2 #box-bt2-bck {
     width: calc(50% - 4px);
     margin-top: 4px;
     margin-left: 0;
-    background-color: #fafafa;
+    background-color: #000000;
     border-radius: 12px;
     transition: all .2s ease-in-out
 }
@@ -3468,7 +3443,13 @@ body:not(.fluid) #box-top.random #box-bt2 #box-bt2-bck {
 .mouseEvent .bt.twitter.color:hover .bck {
     background-color: #3e82d7
 }
-
+.bt.discord.color .bck {
+    background-color: #5865F2;
+  }
+  .bt.discord.color:active .bck,
+  .mouseEvent .bt.discord.color:hover .bck {
+    background-color: rgb(78, 89, 216);
+  }
 .bt.instagram.color .bck {
     background-color: #e95950
 }
@@ -3643,7 +3624,7 @@ body:not(.fluid) #box-top.random #box-bt2 #box-bt2-bck {
     width: 60px;
     height: 60px;
     border-radius: 50%;
-    background-color: #fafafa;
+    background-color: #000000;
     transition: background-color .3s ease-in-out
 }
 
@@ -3686,7 +3667,7 @@ body:not(.fluid) #box-top.random #box-bt2 #box-bt2-bck {
 }
 
 #fade-all.white {
-    background-color: #fafafa
+    background-color: #000000
 }
 
 .darkmode #fade-all.white {
@@ -3708,7 +3689,7 @@ body:not(.fluid) #box-top.random #box-bt2 #box-bt2-bck {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: #fafafa;
+    background-color: #000000;
     pointer-events: none;
     opacity: 0;
     transition: opacity .3s ease-in-out, background-color .3s ease-in-out
@@ -3887,7 +3868,7 @@ body:not(.fluid) #box-top.random #box-bt2 #box-bt2-bck {
     position: absolute;
     height: 86px;
     width: 86px;
-    border: 3px dashed #dcdcdc;
+    border: 3px dashed #000000;
     border-radius: 50%;
     opacity: 0
 }
@@ -3943,7 +3924,7 @@ body:not(.fluid) #box-top.random #box-bt2 #box-bt2-bck {
 }
 
 #box-top .bt-bonus.unlock .quarter .svg.q0 svg {
-    fill: #dcdcdc
+    fill: #000000
 }
 
 .darkmode #box-top .bt-bonus.unlock .quarter .svg.q0 svg {
@@ -4025,7 +4006,7 @@ body:not(.fluid) #box-top.random #box-bt2 #box-bt2-bck {
     position: absolute;
     width: inherit;
     height: inherit;
-    background-image: url(../img/bt-bonus.svg);
+    background-image: url(../img/bt-bonus.png);
     background-repeat: no-repeat;
     background-size: 210px 630px;
     background-position: 0 -630px;
@@ -4371,7 +4352,7 @@ video::-webkit-media-controls {
     width: 100%;
     height: 21px;
     background-size: 1024px 21px;
-    background-image: url(../img/game-ombre.svg)
+    background-image: url(../img/game-ombre.png)
 }
 
 #game #box-stage .polo.noPointerEvents {
@@ -4724,7 +4705,7 @@ video::-webkit-media-controls {
 }
 
 .fluid #game #box-bottom {
-    background-color: #fafafa
+    background-color: #000000
 }
 
 .fluid.darkmode #game #box-bottom {
@@ -4779,7 +4760,7 @@ video::-webkit-media-controls {
 #game #box-bottom #box-picto .picto .scale {
     width: 68px;
     height: 68px;
-    background-size: 1496px 136px;
+    background-size: 1564px 136px;
     background-repeat: no-repeat;
     border-radius: 14px;
     transition: opacity .4s ease-out;
@@ -4958,8 +4939,8 @@ video::-webkit-media-controls {
     bottom: 252px !important
 }
 
-.box-popup.middle .flex,
-.fluid .box-popup.middle .bac {
+.box-popup.middle .bac,
+.box-popup.middle .flex {
     top: 116px !important;
     -webkit-box-align: start;
     -ms-flex-align: start;
@@ -5048,7 +5029,7 @@ video::-webkit-media-controls {
 .box-popup .box .pop {
     min-width: 350px;
     border-radius: 6px;
-    background-color: #fafafa
+    background-color: #000000
 }
 
 .darkmode .box-popup .box .pop {
@@ -5172,7 +5153,7 @@ video::-webkit-media-controls {
     margin-top: 15px;
     font-family: ralewayregular, Sans-Serif;
     font-size: 18px;
-    line-height: 23px;
+    line-height: 22px;
     color: #5a5a5a;
     white-space: nowrap;
     cursor: default
@@ -5336,6 +5317,33 @@ video::-webkit-media-controls {
     transform: translateY(0)
 }
 
+.box-popup#pop-album .box {
+    width: 600px
+}
+
+.box-popup#pop-album .pop {
+    background-image: linear-gradient(180deg, rgba(29, 74, 140, .2), rgba(29, 74, 140, 0) 80%)
+}
+
+.box-popup#pop-album .pop #img-album img {
+    display: block;
+    width: 100%;
+    height: auto
+}
+
+.box-popup#pop-album .pop .container {
+    padding-top: 0;
+    padding-bottom: 43px
+}
+
+.box-popup#pop-album .box .pop .container .text {
+    margin-top: 0;
+    margin-bottom: 18px;
+    white-space: normal;
+    font-size: 16px;
+    line-height: 24px
+}
+
 .box-popup.with-tab .box {
     position: relative;
     opacity: 0;
@@ -5439,7 +5447,7 @@ video::-webkit-media-controls {
     width: 217px;
     height: 165px;
     margin: -20px auto 10px;
-    background-image: url(../img/bonus-unlock-clap.svg);
+    background-image: url(../img/bonus-unlock-clap.png);
     background-size: contain;
     background-repeat: no-repeat;
     opacity: 0;
@@ -5450,7 +5458,7 @@ video::-webkit-media-controls {
 }
 
 .darkmode .box-popup.pop-bonus-unlock .box .pop .container .popimg {
-    background-image: url(../img/bonus-unlock-clap-darkmode.svg)
+    background-image: url(../img/bonus-unlock-clap-darkmode.png)
 }
 
 @-webkit-keyframes R {
@@ -5534,7 +5542,7 @@ video::-webkit-media-controls {
     height: 0;
     border-style: solid;
     border-width: 0 16px 40px;
-    border-color: transparent transparent #fafafa
+    border-color: transparent transparent #000000
 }
 
 .darkmode .box-popup.pop-bonus-unlock .box .pop #pointe {
@@ -5569,15 +5577,16 @@ video::-webkit-media-controls {
 
 .pop#pop-credit .container .logo {
     display: inline-block;
-    width: 370px;
-    height: 80px;
-    margin-left: 50px;
+    width: 425px;
+    height: 194px;
+    margin-left: 0 auto;
     pointer-events: none;
-    background-image: url(../img/title.svg)
+    background-image: url(../img/popup-album-hd.png);
+    background-size: auto 194px;
 }
 
 .darkmode .pop#pop-credit .container .logo {
-    background-image: url(../img/title-darkmode.svg)
+    background-image: url(../img/popup-album-hd.png)
 }
 
 .pop#pop-credit .container #copy {
@@ -5648,6 +5657,10 @@ video::-webkit-media-controls {
     background-color: transparent !important
 }
 
+.pop#pop-follow .container #img-shop:hover {
+    background-color: #aaa !important
+}
+
 .safemode #pop-follow,
 .safemode #tab-follow {
     visibility: hidden
@@ -5656,10 +5669,6 @@ video::-webkit-media-controls {
 .pop#pop-language .bt-mini {
     width: 117px;
     margin: 10px 7px !important
-}
-
-.featureLocked .pop#pop-language .bt-mini.hoverLocked#bt-lang-en-US .ic-locked {
-    display: none !important
 }
 
 #pop-setting .container {
@@ -5910,9 +5919,7 @@ input[type=text] {
     box-shadow: none;
     border: none;
     border-radius: 5px;
-    background-color: #dcdcdc;
-    overflow: hidden;
-    text-overflow: ellipsis
+    background-color: #000000
 }
 
 input[type=email].focused::-webkit-input-placeholder,
@@ -6056,7 +6063,9 @@ input[type=text].invalid {
     -moz-user-select: all;
     -ms-user-select: all;
     user-select: all;
-    white-space: nowrap
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden
 }
 
 .mouseEvent .selectarea:hover {
@@ -6094,15 +6103,6 @@ input[type=text].invalid {
 #pop-popup[data-name=save-form] .formline.ic-private .bt-onofftext.focused {
     -webkit-transform: scale(1.1) !important;
     transform: scale(1.1) !important
-}
-
-.afs #pop-popup[data-name=save-form] .formline.ic-name input#input-name {
-    pointer-events: none;
-    cursor: pointer
-}
-
-.afs #pop-popup[data-name=save-form] .formline.ic-dedi {
-    display: none
 }
 
 .box-popup .pop .progress-box {
@@ -6149,71 +6149,6 @@ input[type=text].invalid {
     margin-top: -63px
 }
 
-#pop-popup[data-name=popup-news] .pop {
-    overflow: hidden;
-    width: 900px;
-    height: 450px
-}
-
-#pop-popup[data-name=popup-news] .pop .container {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    width: inherit;
-    height: inherit;
-    padding: 0
-}
-
-#pop-popup[data-name=popup-news] .pop .container .left {
-    width: 400px;
-    height: inherit;
-    margin: 0;
-    background-position: 50%;
-    background-size: cover;
-    background-color: #eee
-}
-
-.darkmode #pop-popup[data-name=popup-news] .pop .container .left {
-    background-color: #000
-}
-
-#pop-popup[data-name=popup-news] .pop .container .right {
-    width: 500px;
-    padding: 65px 65px 65px 40px;
-    text-align: left
-}
-
-#pop-popup[data-name=popup-news] .pop .container .right .title {
-    font-size: 30px
-}
-
-#pop-popup[data-name=popup-news] .pop .container .right .title sup {
-    text-transform: none
-}
-
-#pop-popup[data-name=popup-news] .pop .container .right .text {
-    white-space: normal
-}
-
-#pop-popup[data-name=popup-news] .pop .container .right .bt-mini {
-    margin: 40px 0 0 !important
-}
-
-.box-popup#pop-dialog[data-name=dialog-clipboard] .pop {
-    max-width: none
-}
-
-.box-popup#pop-dialog[data-name=dialog-clipboard] .pop .selectarea {
-    width: auto;
-    -webkit-user-select: all;
-    -moz-user-select: all;
-    -ms-user-select: all;
-    user-select: all
-}
-
 .noPadding #lock-pause #bt-resume {
     margin: -652px 0 0 948px
 }
@@ -6227,12 +6162,12 @@ input[type=text].invalid {
     margin-left: 0
 }
 
-.noPadding #box-top #bt-clock {
-    right: 0
+.noPadding #box-top .bt#bt-home {
+    margin-right: 0
 }
 
-.noPadding #box-top #box-bt1 .bt.right:last-child {
-    margin-right: 0
+.noPadding #box-top #bt-clock {
+    right: 0
 }
 
 .noPadding #box-top #cnt-record {
@@ -6275,34 +6210,10 @@ input[type=text].invalid {
     font-size: 14px
 }
 
-#pop-popup[data-name=get-full-app] #bt-getapp {
-    margin: 20px 0
-}
-
-.box-popup[data-name=get-full-app-browser] .pop {
-    min-width: 600px
-}
-
-.box-bt-store {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-    margin: 24px 0
-}
-
 .bt-store {
     display: block;
     width: 100%;
-    max-width: 200px;
-    margin: 6px;
+    max-width: 180px;
     transition: -webkit-transform .3s ease;
     transition: transform .3s ease;
     transition: transform .3s ease, -webkit-transform .3s ease;
@@ -6313,9 +6224,9 @@ input[type=text].invalid {
 .bt-store .bck {
     width: 100%;
     height: 0;
-    padding-bottom: 29.56%;
-    background: url(../img/bt-store-all.png) no-repeat;
-    background-size: cover;
+    padding-bottom: 29.8245614035%;
+    background: url(../img/demo-bt-store.png) no-repeat;
+    background-size: 658.5% 100%;
     text-indent: -9999px
 }
 
@@ -6324,26 +6235,22 @@ input[type=text].invalid {
 }
 
 .bt-store .bck.playstore {
-    background-position: 16.66667% 0
+    background-position: 20% 0
 }
 
 .bt-store .bck.amazonstore {
-    background-position: 33.33334% 0
+    background-position: 40% 0
 }
 
 .bt-store .bck.macappstore {
-    background-position: 50.00001% 0
+    background-position: 60% 0
 }
 
 .bt-store .bck.windowsstore {
-    background-position: 66.66668% 0
+    background-position: 80% 0
 }
 
-.bt-store .bck.aic {
-    background-position: 83.33335% 0
-}
-
-.bt-store .bck.steam {
+.bt-store .bck.appinchina {
     background-position: right 0
 }
 
@@ -6408,46 +6315,20 @@ input[type=text].invalid {
     color: #000
 }
 
-.appBrowserDemo #box-top .bt .hitzone {
-    margin-top: -80% !important
-}
-
-.appBrowserDemo #box-top .bt-long .hitzone {
-    margin-top: 10px !important
-}
-
-.appBrowserDemo #box-top #bt-clock .hitzone,
-.appBrowserDemo #box-top .bt-bonus .hitzone {
-    top: 0 !important
-}
-
-.appBrowserDemo #home-bt-news,
-.appBrowserDemo .pop#pop-language .bt-mini.hoverLocked .ic-locked,
-.sq #bt-faq,
-.sq #home-bt-news,
+.expo #bt-faq,
+.expo #home-bt-album,
+.expo #home-bt-list,
+.expo #home-bt-param,
+.expo #home-bt-switch,
+.expo #pop-follow,
+.expo #tab-follow,
+.sq #home-bt-album,
 .sq #pop-credit #bt-feedback,
 .sq #pop-credit #bt-rating,
 .sq #pop-follow,
 .sq #pop-popup[data-name=global-share] .bt.facebook,
-.sq #pop-popup[data-name=global-share] .bt.mail,
 .sq #pop-popup[data-name=global-share] .bt.twitter,
 .sq #tab-follow {
-    display: none !important
-}
-
-.cn-and #lock-all.showAd {
-    background-color: rgba(0, 0, 0, .5);
-    pointer-events: auto;
-    visibility: visible
-}
-
-.expo #bt-faq,
-.expo #home-bt-list,
-.expo #home-bt-news,
-.expo #home-bt-param,
-.expo #home-bt-switch,
-.expo #pop-follow,
-.expo #tab-follow {
     display: none !important
 }
 
@@ -6512,9 +6393,9 @@ body.mobile .box-popup#pop-popup .scale {
     transform: scale(1.8)
 }
 
+body.mobile .box-popup#pop-album .scale,
 body.mobile .box-popup#pop-info .scale,
-body.mobile .box-popup#pop-param .scale,
-body.mobile .box-popup#pop-popup[data-name=popup-news] .scale {
+body.mobile .box-popup#pop-param .scale {
     -webkit-transform: scale(1.3);
     transform: scale(1.3)
 }
@@ -6533,8 +6414,8 @@ body.mobile .tab {
     font-size: 20px
 }
 
-body.mobile .box-popup#pop-info .slideshow .img-box .img .txt,
-body.mobile .box-popup#pop-news .box .pop .container .text {
+body.mobile .box-popup#pop-album .box .pop .container .text,
+body.mobile .box-popup#pop-info .slideshow .img-box .img .txt {
     font-size: 19px;
     line-height: 22px
 }
@@ -6675,7 +6556,7 @@ body.ultrawide .bt#home-bt-param {
     margin-right: 50px
 }
 
-body.ultrawide #home-bt-news {
+body.ultrawide #home-bt-album {
     top: 39px;
     left: 109px
 }
@@ -6758,21 +6639,6 @@ body.ultrawide .box-popup.bottomSlide.mini .flex {
 body.ultrawide .box-popup.middle .bac,
 body.ultrawide .box-popup.middle .flex {
     top: 96px !important
-}
-
-.center {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.textcenter {
-    text-align: center;
-}
-
-.darkmode .textcenter {
-    text-align: center;
-    color: #888
 }
 
 
